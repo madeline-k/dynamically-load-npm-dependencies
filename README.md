@@ -1,4 +1,4 @@
-# dynamically-load-lambda-layer-dependencies
+# dynamically-load-npm-dependencies
 
 This repository is for a proof-of-concept showing it is possible to...
 - Download an npm package, then `require()` and use it at runtime using Node.js. 
@@ -8,3 +8,7 @@ This repository is for a proof-of-concept showing it is possible to...
 
 
 This repository has 3 subdirectories:
+
+`lazy-load-npm-packages-poc`: This is a JSII library containing the logic to dynamically load npm dependencies at runtime
+`python-consumer`: A Python project that uses `lazy-load-npm-packages-poc`.
+`node-consumer`: A TypeScript project that uses `lazy-load-npm-packages-poc`.
