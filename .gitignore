@@ -1,3 +1,15 @@
+# Typescript, jsii:
+.jsii
+*.out
+dist/
+*.d.ts
+*.js
+node_modules/
+tsconfig.tsbuildinfo
+tsconfig.json
+
+# Python template:
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
