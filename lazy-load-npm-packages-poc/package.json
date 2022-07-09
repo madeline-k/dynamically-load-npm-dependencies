@@ -1,0 +1,38 @@
+{
+  "name": "lazy-load-npm-packages-poc",
+  "version": "1.0.0",
+  "description": "library to test if it is possible to dynamically load npm modules when running in jsii target languages",
+  "main": "index.js",
+  "scripts": {
+    "build": "jsii",
+    "build:watch": "jsii --watch",
+    "package": "jsii-pacmak",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Madeline",
+    "email": "mkusters@amazon.com"
+  },
+  "repository": {
+    "url": "https://none.git"
+  },
+  "license": "ISC",
+  "stability": "experimental",
+  "types": "index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "targets": {
+      "python": {
+        "distName": "lazy-load-npm-packages-poc",
+        "module": "lazy_load_npm_packages_poc"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "jsii": "^1.57.0",
+    "jsii-pacmak": "^1.57.0"
+  }
+}
