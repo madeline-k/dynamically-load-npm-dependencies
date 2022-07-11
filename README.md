@@ -50,7 +50,6 @@ pip install -r requirements.txt
 
 1. Clear npm cache, and install the Python version of the dependency.
 ```
-# clear the npm cache
 npm cache clean --force
 pip install aws-cdk.core
 ```
@@ -90,9 +89,8 @@ node ./index.js
 
 1. Clear npm cache, and install the dependency you are trying to dynamically load.
 ```
-# clear the npm cache
 npm cache clean --force
-npm install aws-cdk.core
+npm install @aws-cdk/core
 ```
 
 2. Turn your mac into airplane mode or turn off wi-fi.
