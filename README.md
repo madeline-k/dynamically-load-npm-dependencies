@@ -75,9 +75,30 @@ from aws_cdk.core import App
 
 #### Setup
 
+```
+npm install
+npx tsc
+```
+
 #### Test with network
+
+```
+node ./index.js
+```
 
 #### Test without network
 
+1. Clear npm cache, and install the dependency you are trying to dynamically load.
+```
+# clear the npm cache
+npm cache clean --force
+npm install aws-cdk.core
+```
 
+2. Turn your mac into airplane mode or turn off wi-fi.
 
+3. Run it.
+
+```
+node ./index.js
+```
