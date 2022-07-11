@@ -31,12 +31,16 @@ export class DynamicallyLoadedNpmPackage {
       // Try again after clearing the require cache
       this.clearNodeRequireCache();
       p = this.requireWrapper(this.packageName);
+    }
 
-      if (!p) {
-        // Try again with the absolute path
-        const dir = this.checkRequirePathsForTheDynamicallyLoadedPackage();
-        if (dir) {
-          p = this.requireWrapper(dir);
+    if (!p) {
+      // Try again with the absolute path
+      const dir = this.checkRequirePathsForTheDynamicallyLoadedPackage();
+      if (dir) {
+        p = this.requireWrapper(dir);
+        if (!p) {
+          // Try again with /lib added
+          p = this.requireWrapper(path.join(dir, '/lib'));
         }
       }
     }
